@@ -1,0 +1,246 @@
+// Importing Google Fonts
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;300;400;600;700&family=Teko:wght@300;400;500;600;700&family=Lato:wght@100;300;400;700;900&display=swap");
+
+// Variables for colors and fonts
+$primary-bg-color: rgb(239, 243, 106);
+$secondary-bg-color: rgb(77, 203, 189);
+$tertiary-bg-color: rgb(36, 22, 81);
+$nav-bg-color: #EFF36A;
+$nav-hover-color: #4dccbd;
+$button-bg-color: #241651;
+$button-border-color: #EFF36A;
+$button-text-color: #4dccbd;
+$text-color: #000;
+
+// Global Styles
+body {
+  font-family: "Lato", sans-serif;
+  background: linear-gradient(180deg, $primary-bg-color 0.4%, $secondary-bg-color 18.4%, $tertiary-bg-color 100%);
+}
+
+// Navigation Bar Styles
+nav {
+  background-color: $nav-bg-color;
+  display: flex;
+  align-items: center;
+  padding: 16px;
+  font-family: "Teko", sans-serif;
+
+  a {
+    color: $text-color;
+    text-decoration: none;
+
+    &:hover {
+      color: $nav-hover-color;
+    }
+    &:active {
+      color: $nav-bg-color;
+    }
+  }
+
+  button {
+    background: $button-bg-color;
+    border-radius: 12px;
+    border: 2px solid $button-border-color;
+    color: $button-text-color;
+    padding: 10px 20px;
+
+    &:hover {
+      background-color: $nav-hover-color;
+      color: $button-bg-color;
+    }
+  }
+}
+
+// Main Content Styles
+main {
+  img {
+    width: 100%;
+  }
+}
+
+// Movie Card Styles
+.movie-box {
+  font-size: 1.5em;
+  background-color: #ffffff;
+  border: 1px solid #070410;
+  box-shadow: 10px 10px #000000;
+
+  img {
+    height: 299px;
+    position: relative;
+    object-fit: cover;
+  }
+
+  h2 {
+    font-family: "Teko", sans-serif;
+    margin: -5px 0 -30px;
+  }
+}
+
+// Container Styles
+.container {
+  padding: 16px;
+
+  button {
+    font-size: 2em;
+    color: $nav-bg-color;
+    width: 100%;
+    padding: 16px;
+    margin-top: auto;
+    background-color: $button-bg-color;
+    border-radius: 12px;
+    border-style: solid;
+
+    &:hover {
+      background-color: #000000;
+      color: $nav-hover-color;
+    }
+  }
+}
+
+// Flex Layouts for Movie Cards
+.m2 {
+  .movie-box, .container {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+  }
+}
+
+// Responsive Layouts
+// Mobile Layout | Up to 720px
+@media (max-width: 720px) {
+  nav {
+    justify-content: space-between;
+    
+    div:first-child,
+    div:last-child button {
+      font-size: 3em;
+    }
+
+    .part1 {
+      display: none;
+    }
+  }
+
+  main {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin: 16px auto;
+
+    .m1, .movie-box {
+      display: block;
+    }
+
+    .m2, #mov-2-f, #mov-3-f {
+      display: none;
+    }
+  }
+}
+
+// Tablet Layout | 720px to 1024px
+@media (min-width: 720px) {
+  nav {
+    display: grid;
+    grid-template-columns: auto 50% auto;
+    box-shadow: 0 6px #000000;
+
+    .part1 {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    div:first-child,
+    div:last-child button {
+      font-size: 3em;
+    }
+
+    div:last-child {
+      text-align: right;
+    }
+  }
+
+  .m2 {
+    display: none;
+  }
+
+  main {
+    padding: 32px;
+    gap: 32px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    .flexing {
+      display: none;
+    }
+  }
+}
+
+// Desktop Layout | 1024px and up
+@media (min-width: 1024px) {
+  nav {
+    justify-content: space-between;
+  }
+
+  #mov-2, #mov-3 {
+    width: 47%;
+    flex-grow: 1;
+    display: inline-block;
+  }
+
+  #mov-4, #mov-5, #mov-6 {
+    display: grid;
+    grid-template-columns: 50% 50%;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .part1 {
+    justify-content: space-evenly;
+  }
+
+  .lala-button {
+    display: flex;
+  }
+
+  main {
+    max-width: 900px;
+    gap: 48px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+
+    img {
+      height: 100%;
+    }
+
+    .flexing {
+      display: flex;
+      gap: 30px;
+    }
+  }
+
+  .m1 img {
+    height: 300px;
+    object-fit: cover;
+    object-position: 0 -35px;
+  }
+
+  .m1 .container {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    padding: 16px;
+  }
+
+  .m2,
+  .m3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+  }
+}

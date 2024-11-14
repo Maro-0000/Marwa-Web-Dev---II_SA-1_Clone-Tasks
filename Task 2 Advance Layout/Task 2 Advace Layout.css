@@ -1,0 +1,262 @@
+/* Importing Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;300;400;600;700&family=Teko:wght@300;400;500;600;700&family=Lato:wght@100;300;400;700;900&display=swap");
+
+/* Global Styles */
+body {
+  font-family: "Lato", sans-serif;
+  background: linear-gradient(180deg, rgb(239, 243, 106) 0.4%, rgb(77, 203, 189) 18.4%, rgb(36, 22, 81) 100%);
+}
+
+/* Navigation Bar Styles */
+nav {
+  background-color: #EFF36A;
+  display: flex;
+  align-items: center;
+  padding: 16px;
+  font-family: "Teko", sans-serif; /* Using Teko for nav items */
+}
+
+nav a {
+  color: #000; /* Link color */
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: #4dccbd; /* Hover effect on links */
+}
+
+nav a:active {
+  color: #EFF36A; /* Active link color */
+}
+
+/* Navigation Button Styles */
+nav button {
+  background: #241651;
+  border-radius: 12px;
+  border: 2px solid #EFF36A;
+  color: #4dccbd;
+  padding: 10px 20px;
+}
+
+nav button:hover {
+  background-color: #4dccbd;
+  color: #241651;
+}
+
+/* Main Content and Movie Card Styles */
+main img {
+  width: 100%; /* Full-width images */
+}
+.movie-box {
+  font-size: 1.5em;
+  background-color: #ffffff;
+  border: 1px solid #070410;
+  box-shadow: 10px 10px #000000; /* Shadow effect */
+}
+
+.movie-box img {
+  height: 299px;
+  position: relative;
+  object-fit: cover; /* Keeps images centered */
+}
+
+.movie-box h2 {
+  font-family: "Teko", sans-serif;
+  margin: -5px 0 -30px; /* Reduces top/bottom space */
+}
+
+
+/* Container and Button Styles Inside Movie Cards */
+.container {
+  padding: 16px;
+}
+
+.container button {
+  font-size: 2em;
+  color: #EFF36A;
+  width: 100%;
+  padding: 16px;
+  margin-top: auto;
+  background-color: #241651;
+  border-radius: 12px;
+  border-style: solid;
+
+}
+
+
+.container button:hover {
+  background-color: #000000;
+  color: #4dccbd;
+}
+
+/* Flex Layouts and Responsive Design */
+.m2 .movie-box,
+.m2 .container {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+/* Responsive Layouts */
+/* Mobile Layout | Up to 720px */
+@media (max-width: 720px) {
+  nav {
+    justify-content: space-between;
+  }
+
+  /* Large font sizes for mobile view */
+  nav div:first-child,
+  nav div:last-child button {
+    font-size: 3em;
+  }
+
+  /* Hides specific navigation items */
+  .part1 {
+    display: none;
+  }
+
+  /* Stacks movie boxes vertically */
+  main {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin: 16px auto;
+  }
+
+  /* Show single movie view */
+  .m1, .movie-box {
+    display: block;
+  }
+
+  /* Hides two-movie layout on mobile */
+  .m2 {
+    display: none;
+  }
+
+  #mov-2-f, #mov-3-f{
+    display: none;
+  }
+}
+
+/* Tablet Layout | 720px to 1024px */
+@media (min-width: 720px) {
+  nav {
+    display: grid;
+    grid-template-columns: auto 50% auto;
+    box-shadow: 0 6px #000000;
+  }
+
+  .part1 {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  nav div:first-child,
+  nav div:last-child button {
+    font-size: 3em; /* Large font size for branding */
+  }
+
+  nav div:last-child {
+    text-align: right;
+  }
+
+  /* Hides individual movie layout */
+  .m2 {
+    display: none;
+  }
+
+  /* Grid layout for movies */
+  main {
+    padding: 32px;
+    gap: 32px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  main .flexing {
+    display: none;
+  }
+}
+
+/* Desktop Layout | 1024px and up */
+@media (min-width: 1024px) {
+  nav {
+    justify-content: space-between;
+  }
+
+  #mov-2, #mov-3 {
+    width: 47%;
+    flex-grow: 1;
+    display: inline-block;
+  }
+
+  #mov-4, #mov-5, #mov-6{
+    display: grid;
+    grid-template-columns: 50% 50%;
+  }
+
+  #mov-4 img , #mov-5 img, #mov-6 img{
+   width: 100%;
+   height: 100%;
+  }
+
+  .part1 {
+    justify-content: space-evenly;
+  }
+
+  /* Special button for layouts needing flex alignment */
+  .lala-button {
+  display: flex;
+  }
+
+  /* Center main content on the page */
+  main {
+    max-width: 900px;
+    gap: 48px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Full height images for desktop view */
+  main img {
+    height: 100%;
+  }
+
+  .flexing{
+  display:flex;
+  }
+
+  #mov-2, #mov-3 {
+    display: none;
+  }
+
+  main .flexing {
+    display: flex;
+    gap: 30px;
+  }
+
+  /* Image cropping and positioning for better layout */
+  .m1 img {
+    height: 300px;
+    object-fit: cover;
+    object-position: 0 -35px;
+  }
+
+  /* Grid layout for main movie card and details */
+  .m1 .container {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    padding: 16px;
+  }
+
+  /* Two-column layout for m2 and m3 sections */
+  .m2,
+  .m3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+  }
+}
+
+/*# sourceMappingURL=Task 2 Advace Layout.css.map */
