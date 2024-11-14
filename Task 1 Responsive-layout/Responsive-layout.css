@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Protest+Guerrilla&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+
+
+/* Base styles */
+body {
+  background-color: #e9e9e9; /* Sets the background color of the page */
+  font-family: 'Josefin Sans', sans-serif; /* Applies a clean sans-serif font to the body */
+  margin: 0;
+  padding: 0;
+  color: #333; /* Default text color */
+}
+
+article {
+    padding: 0%; /* Removes padding from article elements */
+}
+
+.BG {
+    text-align: center; /* Centers text within elements with class 'BG' */
+}
+
+nav {
+    display: block; /* Ensures nav elements are block-level */
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-evenly; /* Evenly spaces navigation items */
+    list-style: none; /* Removes bullet points from list items */
+}
+
+nav ul li a {
+    text-decoration: none; /* Removes underline from links */
+    color: black; /* Sets link text color to black */
+}
+
+.navbar ul li {
+    justify-content: center;
+    text-align: center; /* Centers navigation text */
+}
+
+.logo {
+  width: 80px; /* Sets a default width for the logo (applies to mobile by default) */
+}
+
+main {
+  background-color: white; /* Main content background color */
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0%; /* Removes padding from main content area */
+  border: 2px solid #14181d;
+}
+
+h1 {
+  font-family: 'Protest Guerrilla', sans-serif; /* Font family for h1 headings */
+  font-size: 2em; /* Heading font size */
+  margin-bottom: 12px; /* Adds space below h1 elements */
+  color: #14181d; /* Sets the text color for h1 headings */
+}
+
+h2 {
+  font-family: 'Protest Guerrilla', sans-serif; /* Font family for h2 headings */
+  font-size: 1.5em; /* Font size for h2 headings */
+  margin-top: 24px;
+  margin-bottom: 12px; /* Adds space above and below h2 elements */
+  color: #14181d; /* Text color for h2 headings */
+}
+
+.first-paragraph {
+  font-size: 1.2em; /* Sets a slightly larger font size for the first paragraph */
+  margin-bottom: 12px; /* Adds space below the paragraph */
+}
+
+p {
+  line-height: 1.6; /* Improves readability by increasing line height */
+  margin-bottom: 12px; /* Adds space below all paragraph elements */
+}
+
+.author-photo {
+  width: 200px; /* Sets the width of the author photo */
+  border-radius: 50%; /* Makes the photo round */
+  margin-top: 12px; /* Adds space above the author photo */
+}
+
+footer {
+  background-color: #14181d; /* Dark background for footer */
+  color: white; /* White text color for footer */
+  text-align: center; /* Centers the text in the footer */
+  padding: 20px; /* Adds padding inside the footer */
+  margin-top: 20px; /* Adds space above the footer */
+}
+
+/* Flexbox for heading sections to appear next to each other */
+.heading-row {
+  
+  column-count: 3;
+  font-size: 20px;
+}
+
+
+
+
+
+/* Responsive Styles */
+/* Large Mobile Styles */
+@media (min-width: 540px) {
+  header {
+      padding: 20px; /* Adds padding to the header on larger mobile devices */
+  }
+  main {
+      margin: 20px; /* Adds margin around main content */
+      
+  }
+}
+
+/* Tablet Styles */
+@media (min-width: 720px) {
+  header {
+      padding: 30px; /* Adds padding for tablet view */
+  }
+  main {
+      margin: 30px; /* Increases margin for tablet */
+  }
+  .logo {
+      width: 80px; /* Sets logo width for tablet screens */
+  }
+}
+
+/* Desktop Styles */
+@media (min-width: 1024px) {
+  header {
+      padding: 50px; /* Adds larger padding for desktop view */
+  }
+  .logo {
+      width: 200px; /* Increases logo size for desktop */
+  }
+  main {
+      margin: 50px; /* Adds larger margin for desktop */
+  }
+  h1 {
+      font-size: 4em; /* Makes the heading larger for desktop view */
+  }
+  .first-paragraph {
+      font-size: 1.5em; /* Increases first paragraph size for desktop */
+  }
+}
+
+/* Container for the images */
+.image-container {
+  display: grid;
+  grid-template-columns: auto auto; /* Creates a 2-column grid for images */
+}
+
+/* Style for each image */
+.image-container img {
+  width: 100%; /* Makes images responsive and fill the container */
+}
+
+.four-albums {
+    display: grid;
+    grid-template-columns: auto auto; /* 2-column grid layout for albums */
+}
+
+.author {
+    display: flex;
+    justify-content: center; /* Centers author content */
+    margin: 50px; /* Adds margin around the author section */
+    font-size: 20px;
+}
+
+.author img {
+    margin-left: 50px; /* Adds margin to the left of author images */
+    width: 200px;
+}
+
+.space {
+  margin: 0 50px 50px;
+}
