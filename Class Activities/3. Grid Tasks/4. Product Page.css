@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
+
+
+/* Reset margin and padding for all elements, 
+   so we have a clean slate to start designing */
+   * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Set a cool, dark gradient background for the entire page */
+body {
+    font-family: "Dancing Script", cursive;/* Use a clean, easy-to-read font */
+    background: linear-gradient(to bottom right, #FFD3CE, #1b1b1b); /* Dark gradient */
+    color: #ffffff; /* White text color for better contrast */
+    display: flex; /* Flexbox to center content */
+    justify-content: center; /* Horizontally center the grid */
+    align-items: center; /* Vertically center the grid */
+    height: 100vh; /* Full viewport height */
+    overflow: hidden; /* Remove scrolling if content overflows */
+}
+
+/* Main container for the product grid, 
+   ensuring it’s centered */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    width: 100%; /* Full width of the page */
+}
+
+/* Layout grid for product image and info */
+.product-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two equal columns: image on left, text on right */
+    gap: 20px; /* Space between the columns */
+    padding: 20px; /* Padding inside the grid */
+    background: rgba(255, 255, 255, 0.1); /* Transparent 'glass' effect background */
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5); /* Soft shadow to lift the card */
+    backdrop-filter: blur(12px); /* Blur background for the glass effect */
+    -webkit-backdrop-filter: blur(12px); /* Safari compatibility */
+    animation: glow 2s infinite; /* Apply glowing effect to the grid */
+    width: 100%; /* Full width within the container */
+    max-width: 900px; /* Limit the max width on larger screens */
+}
+
+/* Product Image Styling */
+.product-image img {
+    width: 100%; /* Image takes full width of the column */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Rounded corners on the image */
+}
+
+/* Product info section on the right */
+.product-info {
+    display: flex; /* Flexbox layout for the text */
+    flex-direction: column; /* Stack items vertically */
+    justify-content: center; /* Center text vertically */
+    align-items: flex-start; /* Align text to the left */
+}
+
+/* Product Title Styling */
+.product-title h1 {
+    font-size: 2.5rem; /* Large font size for the title */
+    color: #fff200; /* Neon blue/green color for the title */
+    margin-bottom: 10px; /* Space below the title */
+}
+
+/* Product Price Styling */
+.product-price p {
+    font-size: 2rem; /* Bold, noticeable price */
+    font-weight: bold; /* Make the price stand out */
+    color: #ffffff; /* Neon magenta color */
+    margin-bottom: 20px; /* Space below the price */
+}
+
+/* Product Description Styling */
+.product-description p {
+    font-size: 1.1rem; /* Standard font size for the description */
+    line-height: 1.6; /* Increase line spacing for better readability */
+    color: #e0e0e0; /* Light gray for the text */
+}
+
+/* Media Query for Mobile Screens */
+@media (max-width: 768px) {
+    .product-grid {
+        grid-template-columns: 1fr; /* Single column for mobile: image on top, text below */
+        text-align: center; /* Center align the text on smaller screens */
+    }
+
+    /* Adjust alignment of text for mobile */
+    .product-info {
+        align-items: center; /* Center the text below the image */
+    }
+}
+
+/* Glowing effect animation */
+@keyframes glow {
+    0% {
+        box-shadow: 0 0 20px rgba(255, 255, 255, 0.5); /* Soft blue/green glow */
+    }
+    50% {
+        box-shadow: 0 0 40px rgb(255, 255, 255); /* Stronger glow at 50% */
+    }
+    100% {
+        box-shadow: 0 0 20px rgba(255, 255, 255, 0.5); /* Return to soft glow */
+    }
+}

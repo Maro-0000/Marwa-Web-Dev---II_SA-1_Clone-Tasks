@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Interface</title>
+    <link rel="stylesheet" href="3.Dashboard Interface.css">
+</head>
+<body>
+            
+        <!--Build a simple dashboard layout with a header, 
+        sidebar, and main content area using CSS Grid. 
+        Include widgets for statistics, recent activity, and notifications-->
+
+  <div class="dashboard">
+        <!-- Header Section -->
+        <header class="header">
+            <h1>Dashboard</h1>
+        </header>
+
+        <!-- Sidebar Section -->
+        <aside class="sidebar">
+            <ul>
+                <li><a href="#"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
+                <li><a href="#"><i class="fas fa-chart-line"></i> Statistics</a></li>
+                <li><a href="#"><i class="fas fa-list-alt"></i> Recent Activity</a></li>
+                <li><a href="#"><i class="fas fa-bell"></i> Notifications</a></li>
+                <li><a href="#"><i class="fas fa-cog"></i> Settings</a></li>
+            </ul>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <!-- Statistics Widget -->
+            <section class="widget stats">
+                <h2><i class="fas fa-chart-bar"></i> Statistics</h2>
+                <p>Visitors: 5,232</p>
+                <p>Sales: 312</p>
+                <p>Revenue: $15,600</p>
+            </section>
+
+            <!-- Recent Activity Widget -->
+            <section class="widget activity">
+                <h2><i class="fas fa-history"></i> Recent Activity</h2>
+                <ul>
+                    <li><i class="fas fa-user"></i> User A uploaded a photo</li>
+                    <li><i class="fas fa-user"></i> User B commented on a post</li>
+                    <li><i class="fas fa-user"></i> User C liked your content</li>
+                    <li><i class="fas fa-user"></i> User A uploaded a photo</li>
+                    <li><i class="fas fa-user"></i> User B commented on a post</li>
+                    <li><i class="fas fa-user"></i> User C liked your content</li>
+                </ul>
+            </section>
+
+            <!-- Notifications Widget -->
+            <section class="widget notifications">
+                <h2><i class="fas fa-bell"></i> Notifications</h2>
+                <ul>
+                    <li><i class="fas fa-envelope"></i> You have 5 new messages</li>
+                    <li><i class="fas fa-tools"></i> Server maintenance tomorrow</li>
+                    <li><i class="fas fa-calendar-alt"></i> Reminder: Meeting at 3 PM</li>
+                </ul>
+            </section>
+        </main>
+    </div>
+    
+</body>
+</html>
