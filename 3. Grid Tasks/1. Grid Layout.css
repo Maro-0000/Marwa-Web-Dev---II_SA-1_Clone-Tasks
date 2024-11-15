@@ -1,0 +1,94 @@
+
+
+/* Base styles for the page */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #110662, #5161a9); /* Cool radiant background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Container for the layout */
+.container {
+    display: grid;
+    grid-template-columns: 1fr 3fr; /* Two columns: sidebar (1 part), content (3 parts) */
+    gap: 20px; /* Spacing between the two columns */
+    width: 80%;
+    max-width: 1200px;
+}
+
+/* Glowing text animation */
+@keyframes textGlow {
+    0%, 100% {
+        text-shadow: 0 0 15px rgba(255, 215, 0, 0.8); /* Bright glowing text */
+    }
+    50% {
+        text-shadow: 0 0 5px rgba(255, 215, 0, 0.3); /* Dimmed glowing text */
+    }
+}
+
+/* Box glow animation */
+@keyframes boxGlow {
+    0%, 100% {
+        box-shadow: 0 0 20px rgba(255, 255, 255, 0.7); /* Bright box shadow */
+    }
+    50% {
+        box-shadow: 0 0 5px rgba(255, 255, 255, 0.3); /* Dimmed box shadow */
+    }
+}
+
+/* Sidebar styles */
+.sidebar {
+    background: rgba(255, 255, 255, 0.3); /* Glass effect with slight transparency */
+    border-radius: 10px;
+    padding: 20px;
+    backdrop-filter: blur(10px); /* Blur effect to create glass look */
+    animation: boxGlow 4s infinite ease-in-out; /* Blinking light effect on the box */
+    color: #333;
+    position: relative;
+}
+
+/* Main content styles */
+.main-content {
+    background: rgba(255, 255, 255, 0.3); /* Glass effect */
+    border-radius: 10px;
+    padding: 20px;
+    backdrop-filter: blur(10px);
+    animation: boxGlow 4s infinite ease-in-out; /* Blinking light effect on the box */
+    color: #333;
+    position: relative;
+}
+
+/* Glowing text for sidebar and main content */
+.sidebar h2, .main-content h1, .sidebar p, .main-content p {
+    animation: textGlow 3s infinite ease-in-out; /* Glowing effect for the text */
+    color: white;
+}
+
+/* Cartoon icons styles */
+.cartoons {
+    display: flex;
+    justify-content: flex-end; /* Align cartoons to the bottom-right */
+    gap: 10px;
+    margin-top: 20px; /* Spacing from the text */
+}
+
+.cartoons img {
+    width: 50px; /* Cartoon image size */
+    height: auto;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    .container {
+        grid-template-columns: 1fr; /* Stacks the sidebar and content vertically on small screens */
+    }
+
+    .cartoons {
+        justify-content: center; /* Center the cartoons on smaller screens */
+    }
+}
