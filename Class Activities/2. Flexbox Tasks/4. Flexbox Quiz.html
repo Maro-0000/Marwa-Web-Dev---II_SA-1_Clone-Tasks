@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox Quiz</title>
+    <link rel="stylesheet" href="4. Flexbox Quiz.css">
+</head>
+<body>
+    
+    
+    <!--Create a quiz layout where questions are displayed in a column
+     and answer choices are displayed in a row using Flexbox. 
+     Style it to be visually appealing.-->
+
+     <div class="quiz-container">
+        <h1>Quiz Title</h1>
+        <div class="question">
+            <h2 id="question-text">What is the capital of France?</h2>
+        </div>
+        <div class="answers">
+            <button class="answer-button" onclick="checkAnswer(this, false)">Berlin</button>
+            <button class="answer-button" onclick="checkAnswer(this, true)">Paris</button>
+            <button class="answer-button" onclick="checkAnswer(this, false)">Madrid</button>
+            <button class="answer-button" onclick="checkAnswer(this, false)">Rome</button>
+        </div>
+        <div id="result" class="result"></div>
+        <button id="next-button" class="next-button" onclick="nextQuestion()">Next</button>
+    </div>
+    <script src="4. Flexbox Quiz.js"></script>
+
+
+</body>
+</html>
